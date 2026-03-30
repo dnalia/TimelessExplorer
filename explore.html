@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelicious Adventures</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        header {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: blue;
+            text-decoration: none;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, button {
+            margin-top: 5px;
+            padding: 8px;
+            font-size: 16px;
+            width: 100%;
+        }
+        #countryDetails {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            background-color: white;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>🗺️ Travelicious Adventures ✈️</header>
+
+    <a href="homepage.html" class="back-link">Back to Homepage</a>
+    
+    <h2>Country Information Explorer</h2>
+
+    <!-- New input for current location -->
+    <label for="current_location">Enter Your Current Country:</label>
+    <input type="text" id="current_location" placeholder="e.g., Malaysia">
+
+    <!-- Dropdown for search type -->
+    <label for="search_type">Search By:</label>
+    <select id="search_type" onchange="handleExplore()">
+        <option value="">--Select--</option>
+        <option value="country">Country Name</option>
+        <option value="continent">Continent</option>
+        <option value="region">Region</option>
+        <option value="subregion">Subregion</option>
+    </select>
+
+    <!-- Input for search term (dynamic based on the dropdown) -->
+    <div id="search_input"></div>
+    <button onclick="buttonClicked()">Search</button>
+
+    <!-- Display country information in boxes -->
+    <div id="countryDetails">
+        <h3 id="countryName"></h3>
+        <img id="flag" src="" alt="Country Flag" width="100">
+        <p><strong>Capital:</strong> <span id="capital"></span></p>
+        <p><strong>Region:</strong> <span id="region"></span></p>
+        <p><strong>Subregion:</strong> <span id="subregion"></span></p>
+        <p><strong>Area:</strong> <span id="area"></span> km²</p>
+        <p><strong>Population:</strong> <span id="population"></span></p>
+        <p><strong>Languages:</strong> <span id="languages"></span></p>
+        <p><strong>Timezone:</strong> <span id="timezone"></span></p>
+        <p><strong>Continent:</strong> <span id="continent"></span></p>
+        <p><strong>Car Side:</strong> <span id="carSide"></span></p>
+        <p><strong>Start of Week:</strong> <span id="startOfWeek"></span></p>
+        <img id="coatsOfArms" src="" alt="Coat of Arms" width="100">
+    </div>
+    
+    <h3>Enter the Language You Want to Explore:</h3>
+    <input type="text" id="languageInput" placeholder="e.g., malay, english, french">
+    <button onclick="explorePhrases()">Explore Phrases</button><br>
+
+    <a href="itinerary.html"><button>Go to Itinerary</button></a>
+
+    <footer>Explore More Countries with World Explorer</footer>
+
+    <script src="country.js"></script>
+</body>
+</html>

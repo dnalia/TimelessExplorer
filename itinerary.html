@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Explorer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .country-results {
+            margin-top: 20px;
+        }
+        h3 {
+            margin: 10px 0;
+        }
+        .country-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+        }
+        .country-card img {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Country Explorer</h1>
+    <label for="current_location">Current Location:</label>
+    <input type="text" id="current_location" placeholder="Enter your current location">
+
+    <label for="search_type">Search By:</label>
+    <select id="search_type" onchange="handleExplore()">
+        <option value="country">Country</option>
+        <option value="continent">Continent</option>
+        <option value="region">Region</option>
+        <option value="subregion">Subregion</option>
+    </select>
+
+    <div id="search_input"></div>
+    <button onclick="buttonClicked()">Explore</button>
+
+    <div id="country_results" class="country-results"></div>
+
+    <h3>Enter the Language You Want to Explore:</h3>
+    <input type="text" id="languageInput" placeholder="e.g., malay, english, french">
+    <button onclick="explorePhrases()">Explore Phrases</button><br>
+
+    <script src="displaycountry.js"></script>
+</body>
+</html>
